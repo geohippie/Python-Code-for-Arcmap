@@ -195,6 +195,12 @@ def polyoff(): #Turn off all polygons, I use this when editing text.
 
     refresh()
 
+def	test():
+	count = 0
+	while count <100000:
+            count = count + 1
+            print "Holy Cow Turds Batman, we've been hacked",count, "times."
+            
 def theweb():
     for row in arcpy.SearchCursor("Owners"):
         parcelnumber= row.PID
@@ -228,5 +234,7 @@ def helpme():
 
              theweb() will open appraiser website.
 
-             uk() will find the unknown side.''')
+             uk() will find the unknown side
+			 
+			 test() will make sure everything works.''')
 helpme()   
