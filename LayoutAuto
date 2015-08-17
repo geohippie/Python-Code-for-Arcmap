@@ -195,7 +195,7 @@ def polyoff(): #Turn off all polygons, I use this when editing text.
 
     refresh()
 
-def	test():
+def test():
 	count = 0
 	while count <100000:
             count = count + 1
