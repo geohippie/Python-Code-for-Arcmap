@@ -1,0 +1,20 @@
+import xlwt
+import xlrd
+import arcpy
+
+textfile =  r"\\Path\file.txt"
+
+
+f = open(textfile, 'r+')
+row_list = []
+for row in f:
+    row_list.append(row.split('|'))
+column_list = zip(*row_list)
+workbook = xlwt.Workbook()
+worksheet = workbook.add_sheet('Sheet1')
+i = 0
+for column in column_list:
+    for item in range(len(column)):
+        worksheet.write(item, i, column[item])
+    i+=1
+workbook.save(r"\\Path\file.xls")
